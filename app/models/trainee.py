@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, Integer, String
 from sqlalchemy.orm import relationship
-
+from .trainee_to_course import TraineeToCourse
 from app.db.base_class import Base
 
 
@@ -11,4 +11,4 @@ class Trainee(Base):
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean(), default=True)
     is_superuser = Column(Boolean(), default=False)
-    #course = relationship("Course", back_populates="owner")
+    course = relationship("TraineeToCourse", back_populates="trainee")
