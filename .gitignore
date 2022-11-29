@@ -5,3 +5,5 @@
 .DS_Store
 *.pyc
 *.pyo
+.pytest_cache
+**/__pycache__
